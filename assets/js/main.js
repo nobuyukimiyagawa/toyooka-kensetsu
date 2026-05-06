@@ -33,6 +33,22 @@ const updateScrollState = () => {
 updateScrollState();
 window.addEventListener('scroll', updateScrollState, { passive: true });
 
+// Hero overlap state (SP) — toggle white logo / white hamburger over hero,
+// switch to white bar header after scrolling past hero
+const heroEl = document.querySelector('.hero');
+if (heroEl) {
+  const updateHeroState = () => {
+    const rect = heroEl.getBoundingClientRect();
+    const HEADER_PASS = 60;
+    const overHero = rect.bottom > HEADER_PASS;
+    document.documentElement.classList.toggle('is-over-hero', overHero);
+    document.documentElement.classList.toggle('is-past-hero', !overHero);
+  };
+  updateHeroState();
+  window.addEventListener('scroll', updateHeroState, { passive: true });
+  window.addEventListener('resize', updateHeroState, { passive: true });
+}
+
 // Craft category filter + paged carousel (top page)
 const filterCats = document.querySelectorAll('[data-filter-cats] [data-filter]');
 const filterGrid = document.querySelector('[data-filter-grid]');

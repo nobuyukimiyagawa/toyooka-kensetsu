@@ -120,8 +120,9 @@ body::before {
   align-items: center;
   min-height: 57px;
 }
-.site-logo { display: inline-flex; }
+.site-logo { display: inline-flex; position: relative; }
 .site-logo__img { height: 32px; width: auto; }
+.site-logo__img--light { display: none; }
 .site-header__addr { display: none; }
 
 .site-header__right {
@@ -235,6 +236,25 @@ body::before {
   .site-nav.is-open { transform: translateY(0); }
   .site-nav ul { flex-direction: column; gap: 0; padding: 16px 0; }
   .site-nav a { display: block; padding: 18px 28px; font-size: 14px; }
+
+  /* Over-hero state — header overlays dark photo, use white logo + white hamburger */
+  html.is-over-hero .site-logo__img--dark { display: none; }
+  html.is-over-hero .site-logo__img--light { display: inline-block; }
+  html.is-over-hero .menu-toggle span { background: #fff; }
+
+  /* Past-hero state — header floats above content, white bar + dark elements */
+  html.is-past-hero .site-header__brand {
+    top: 0; left: 0; right: 0;
+    padding: 16px 22px;
+    height: 64px;
+    background: rgba(255,255,255,.94);
+    backdrop-filter: saturate(160%) blur(6px);
+    border-bottom: 1px solid var(--rule-soft);
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    transition: background-color var(--t-fast) ease-out;
+  }
 }
 
 /* ========================================================
