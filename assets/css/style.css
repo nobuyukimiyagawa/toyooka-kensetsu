@@ -327,8 +327,8 @@ body::before {
   /* Hero — full-bleed photo with text overlay */
   .hero {
     padding: 0;
-    min-height: 100vh;
-    height: 100vh;
+    min-height: 100dvh;
+    height: 100dvh;
     overflow: hidden;
   }
   .hero__bg-mobile {
@@ -357,7 +357,7 @@ body::before {
   .hero__text {
     position: absolute;
     left: 28px; right: 28px;
-    bottom: 8vh;
+    bottom: 8dvh;
     width: auto; max-width: none;
     margin-bottom: 0;
     z-index: 5;
