@@ -199,16 +199,16 @@ body::before {
   .site-sns a { width: 26px; height: 26px; }
 }
 @media (max-width: 880px) {
-  /* Mobile: transparent overlay header — logo+addr top-left, hamburger top-right */
+  /* Mobile: transparent overlay header — logo top-left, hamburger top-right (vertically centered together) */
   .site-header__brand {
     position: fixed; top: 22px; left: 22px; right: auto;
     background: transparent;
     backdrop-filter: none;
-    padding: 0; height: auto;
+    padding: 0;
+    height: 44px;
     border-bottom: 0;
-    display: flex; flex-direction: column; align-items: flex-start;
+    display: flex; flex-direction: row; align-items: center;
     gap: 12px;
-    min-height: 0;
     z-index: var(--z-header);
   }
   .site-header__right {
@@ -219,11 +219,13 @@ body::before {
   .site-sns { display: none; }
   .site-logo__img { height: 28px; }
   .menu-toggle {
-    display: block;
+    display: flex; flex-direction: column; justify-content: center;
     position: fixed; top: 22px; right: 22px;
-    padding: 10px;
+    width: 44px; height: 44px;
+    padding: 0;
     z-index: calc(var(--z-header) + 2);
   }
+  .menu-toggle span { margin: 5px auto; }
   .site-nav {
     position: fixed; top: 0; left: 0; right: 0;
     background: var(--paper);
@@ -245,7 +247,7 @@ body::before {
   /* Past-hero state — header floats above content, white bar + dark elements */
   html.is-past-hero .site-header__brand {
     top: 0; left: 0; right: 0;
-    padding: 16px 22px;
+    padding: 0 22px;
     height: 64px;
     background: rgba(255,255,255,.94);
     backdrop-filter: saturate(160%) blur(6px);
@@ -255,6 +257,7 @@ body::before {
     gap: 0;
     transition: background-color var(--t-fast) ease-out;
   }
+  html.is-past-hero .menu-toggle { top: 10px; }
 }
 
 /* ========================================================
@@ -376,6 +379,7 @@ body::before {
   }
   .hero__text {
     position: absolute;
+    top: auto;
     left: 28px; right: 28px;
     bottom: 8dvh;
     width: auto; max-width: none;
