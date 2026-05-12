@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>豊岡建設 — プレビュー</title>
+<style>
+  :root {
+    --paper:#efe7d4; --blueprint:#0f2d52; --ink:#2a2a2a; --red:#c6442d;
+    --font-jp:"Klee One","Noto Serif JP",serif;
+    --font-en:"Architects Daughter","Caveat",cursive;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; min-height:100vh;
+    font-family:var(--font-jp);
+    background:var(--paper);
+    color:var(--ink);
+    display:grid;
+    place-items:center;
+    padding:48px 24px;
+    background-image:
+      linear-gradient(to right, rgba(70,80,100,.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(70,80,100,.08) 1px, transparent 1px);
+    background-size:32px 32px;
+  }
+  .wrap { max-width:880px; width:100%; }
+  .eyebrow {
+    font-family:var(--font-en);
+    font-size:13px;
+    letter-spacing:.35em;
+    color:var(--red);
+    text-transform:uppercase;
+    margin:0 0 16px;
+  }
+  h1 {
+    font-family:var(--font-jp);
+    font-weight:500;
+    font-size:clamp(32px, 5vw, 56px);
+    line-height:1.4;
+    margin:0 0 12px;
+  }
+  .sub { color:#5a5a55; margin:0 0 48px; line-height:1.9; font-size:14px; }
+  .grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:24px;
+  }
+  a.card {
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    background:#fff;
+    border:1px solid rgba(42,42,42,.15);
+    padding:32px 28px;
+    transition:transform .25s ease, box-shadow .25s ease;
+    position:relative;
+  }
+  a.card::before {
+    content:"";
+    position:absolute; top:-10px; left:24px;
+    width:56px; height:16px;
+    background:rgba(198,68,45,.25);
+    transform:rotate(-3deg);
+  }
+  a.card:hover {
+    transform:translateY(-4px);
+    box-shadow:0 18px 36px -20px rgba(0,0,0,.35);
+  }
+  a.card .tag {
+    font-family:var(--font-en);
+    font-size:11px;
+    letter-spacing:.25em;
+    color:var(--red);
+    margin:0 0 14px;
+  }
+  a.card h2 {
+    font-family:var(--font-jp);
+    font-weight:500;
+    font-size:22px;
+    margin:0 0 12px;
+  }
+  a.card p { font-size:13.5px; color:#5a5a55; line-height:1.85; margin:0 0 16px; }
+  a.card .go {
+    font-family:var(--font-en);
+    font-size:12px;
+    letter-spacing:.2em;
+    border-bottom:1px dashed currentColor;
+    padding-bottom:2px;
+  }
+  footer {
+    margin-top:48px;
+    font-family:var(--font-en);
+    font-size:11px;
+    letter-spacing:.2em;
+    color:rgba(42,42,42,.45);
+    text-align:center;
+  }
+  footer a { color:inherit; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">— TOYOOKA KENSETSU · Design Preview</p>
+    <h1>株式会社 豊岡建設<br>Web デザイン プレビュー</h1>
+    <p class="sub">2つのデザイン案を並列で公開しています。ご確認ください。</p>
+
+    <div class="grid">
+      <a class="card" href="./site/index.html">
+        <p class="tag">V1 — Editorial Craft</p>
+        <h2>サイト案 v1</h2>
+        <p>セリフ・縦書きを基調にした、和モダンの編集系レイアウト。落ち着いた色調と写真の余白でブランドを伝える初期案。</p>
+        <span class="go">OPEN V1 →</span>
+      </a>
+      <a class="card" href="./site-v2/index.html">
+        <p class="tag">V2 — Blueprint × Handwritten</p>
+        <h2>サイト案 v2</h2>
+        <p>製図ブループリント × 手書きスケッチをモチーフに、スクロール連動の動的演出を多数。GSAP + Lenis 採用。</p>
+        <span class="go">OPEN V2 →</span>
+      </a>
+    </div>
+
+    <footer>
+      <a href="https://github.com/nobuyukimiyagawa/toyooka-kensetsu">GITHUB · NOBUYUKIMIYAGAWA / TOYOOKA-KENSETSU</a>
+    </footer>
+  </div>
+</body>
+</html>
