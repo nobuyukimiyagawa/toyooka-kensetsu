@@ -1,0 +1,11 @@
+SP — fix hero text bottom-left + header element vertical alignment
+
+(1) hero__text was inheriting top:18vh from desktop default while only
+overriding bottom — both top and bottom anchors made the block stretch
+top-down, putting text near the top instead of bottom. Add top:auto.
+
+(2) Logo and hamburger had different bounding-box heights so their
+visual centers didn't match. Set both to 44x44 with flex centering, and
+center the toggle inside the 64px white bar in past-hero state.
+
+Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
