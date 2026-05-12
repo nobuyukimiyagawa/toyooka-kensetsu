@@ -1,4 +1,0 @@
-0000000000000000000000000000000000000000 9a02c0c1926e8b014f8aab62e3444fc6610762a8 miyagawanobuyuki <nobuyuki.miyagawa14@gmail.com> 1778074065 +0900	commit (initial): Initial commit — 豊岡建設 corporate website
-9a02c0c1926e8b014f8aab62e3444fc6610762a8 adff80269f81cf8a7ae7eba3a55bfda8321e0ccf miyagawanobuyuki <nobuyuki.miyagawa14@gmail.com> 1778076790 +0900	commit: Use dvh for SP hero — mobile Safari/Chrome 100vh address-bar bug fix
-adff80269f81cf8a7ae7eba3a55bfda8321e0ccf 51792e4f5b4d9df054e995e7e4bd8a020b51c9c3 miyagawanobuyuki <nobuyuki.miyagawa14@gmail.com> 1778077230 +0900	commit: SP hero header — white logo & hamburger over hero, white bar past hero
-51792e4f5b4d9df054e995e7e4bd8a020b51c9c3 db8d6cf4cf3c3dc4d96c2a708d3f077bc1c3bcc1 miyagawanobuyuki <nobuyuki.miyagawa14@gmail.com> 1778077533 +0900	commit: SP — fix hero text bottom-left + header element vertical alignment

@@ -14,3 +14,7 @@
 .vscode/
 .idea/
 node_modules/
+
+# macOS Finder/iCloud duplicate junk
+.git ?
+*\ [0-9]/
